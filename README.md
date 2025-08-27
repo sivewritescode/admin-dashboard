@@ -1,1 +1,1 @@
-# admin-dashboard
+This project is about creating an admin dashboard.
