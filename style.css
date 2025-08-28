@@ -36,6 +36,10 @@ html {
   grid-row-end: 2;
   grid-column-start: 2;
   grid-column-end: 3;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px 35px;
 }
 
 .content-container {
@@ -58,4 +62,67 @@ html {
 .nav-settings {
   padding: 5px;
   border: 2px solid #FA1A8E;
+}
+
+/* We will link SVGs using css pseudo elements: background-image: url() */
+
+.top-header {
+  border: 1px solid #2E6F40;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: auto;
+}
+
+.search-bar {
+  height: 35px;
+  width: 700px;
+  margin-right: auto;
+  padding: 3px;
+  padding-left: 10px;
+  background-color: lightgray;
+  border-radius: 100px;
+}
+
+.account-icon {
+  background-image: url("assets/images/magnify.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+}
+
+.noti-bell {
+  background-image: url("assets/images/bell-ring-outline.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+}
+
+.top-header .profile-photo {
+  background-image: url("assets/images/account-circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+}
+
+.bottom-header {
+  border: 1px solid #2E6F40;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.bottom-header .profile-photo {
+  background-image: url("assets/images/account-circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 70px;
+}
+
+.bottom-header p {
+  margin-right: auto;
 }
