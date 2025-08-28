@@ -44,3 +44,18 @@ html {
   grid-column-start: 2;
   grid-column-end: 3;
 }
+
+.header-logo {
+  padding: 5px;
+  border: 2px solid #FA1A8E;
+}
+
+.nav-home {
+  padding: 5px;
+  border: 2px solid #FA1A8E;
+}
+
+.nav-settings {
+  padding: 5px;
+  border: 2px solid #FA1A8E;
+}
