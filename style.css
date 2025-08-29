@@ -42,6 +42,7 @@ html {
   flex-direction: column;
   gap: 30px;
   position: relative;
+  z-index: 2;
   box-shadow: 1px 0 5px 0 grey;
   background-color:#458588;
   color: #F2F0EF;
@@ -55,8 +56,9 @@ html {
 
   display: flex;
   flex-direction: column;
-  
-  padding: 20px 35px;
+  position: relative;
+  box-shadow: 0 1px 5px 0 grey;
+  padding: 20px 70px;
 }
 
 .content-container {
@@ -64,6 +66,8 @@ html {
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
+
+  padding: 25px;
 }
 
 .sidebar-logo,
@@ -165,10 +169,11 @@ html {
 }
 
 .top-header {
-  border: 1px solid #2E6F40;
   display: flex;
   align-items: center;
   gap: 20px;
+  color: #3C3836;
+  font-size: 24px;
   margin-bottom: auto;
 }
 
@@ -182,10 +187,12 @@ html {
   border-radius: 100px;
 }
 
-.account-icon {
+.search-icon {
   background-image: url("assets/images/magnify.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(7152%) 
+  hue-rotate(343deg) brightness(88%) contrast(90%);
   height: 30px;
   width: 30px;
 }
@@ -194,6 +201,8 @@ html {
   background-image: url("assets/images/bell-ring-outline.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(24%) saturate(549%) 
+  hue-rotate(59deg) brightness(94%) contrast(90%);
   height: 30px;
   width: 30px;
 }
@@ -202,27 +211,54 @@ html {
   background-image: url("assets/images/account-circle.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(11%) saturate(326%) 
+  hue-rotate(336deg) brightness(90%) contrast(87%);
   height: 50px;
   width: 50px;
 }
 
 .bottom-header {
-  border: 1px solid #2E6F40;
   align-items: center;
   display: flex;
   gap: 20px;
+  color: #3C3836;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 5px;
 }
 
 .bottom-header .profile-photo {
   background-image: url("assets/images/account-circle.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(11%) saturate(326%) 
+  hue-rotate(336deg) brightness(90%) contrast(87%);
   height: 70px;
   width: 70px;
 }
 
 .bottom-header p {
   margin-right: auto;
+}
+
+button {
+  background-color: #CC241D;
+  color: #F2F0EF;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100px;
+  height: 50px;
+  border-radius: 100px;
+  border-style: outset;
+}
+
+button:hover {
+  background-color: #cd625e;
+}
+
+button:active {
+  background-color: #8d110d;
+  border-style: inset;
 }
 
 .content-container {
