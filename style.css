@@ -1,5 +1,15 @@
+@font-face {
+  font-family: "dm-sans";
+  src: 
+    url("assets/fonts/dm-sans/dmsans-variablefont_opszwght-webfont.woff") format("woff"),
+    url("assets/fonts/dm-sans/dmsans-variablefont_opszwght-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 100vh;
+  font-family: "dm-sans";
 }
 
 * {
@@ -12,15 +22,13 @@ html {
   height: 100vh;
   display: grid;
   grid-template-rows: 200px 5fr;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4.2fr;
 }
 
 .sidebar-container,
 .header-container,
 .content-container {
-  border: 2px solid navy;
   background-color: whitesmoke;
-  font-size: 20px;
   padding: 10px;
 }
 
@@ -29,6 +37,14 @@ html {
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  box-shadow: 1px 0 5px 0 grey;
+  background-color:#458588;
+  color: white;
 }
 
 .header-container {
@@ -49,14 +65,102 @@ html {
   grid-column-end: 3;
 }
 
-.header-logo,
+.sidebar-logo,
 .nav-home,
 .nav-settings {
-  padding: 5px;
-  border: 2px solid #FA1A8E;
+  padding: 20px;
 }
 
-/* We will link SVGs using css pseudo elements: background-image: url() */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 35px;
+}
+
+.sidebar-logo .logo {
+  background-image: url("./assets/images/dashboard.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: invert(100%);
+  height: 60px;
+  width: 60px;
+}
+
+.sidebar-home-logo {
+  background-image: url("assets/images/home.svg");
+}
+
+.sidebar-profile-logo {
+  background-image: url("assets/images/profile.svg");
+}
+
+.sidebar-messages-logo {
+  background-image: url("assets/images/message-reply.svg");
+}
+
+.sidebar-history-logo {
+  background-image: url("assets/images/clock-outline.svg");
+}
+
+.sidebar-tasks-logo {
+  background-image: url("assets/images/format-list-bulleted.svg");
+}
+
+.sidebar-communities-logo {
+  background-image: url("assets/images/account-group.svg");
+}
+
+.sidebar-settings-logo {
+  background-image: url("assets/images/cog-outline.svg");
+}
+
+.sidebar-support-logo {
+  background-image: url("assets/images/handshake.svg");
+}
+
+.sidebar-privacy-logo {
+  background-image: url("assets/images/eye-lock.svg")
+}
+
+.sidebar-home,
+.sidebar-profile,
+.sidebar-messages,
+.sidebar-history,
+.sidebar-tasks,
+.sidebar-communities,
+.sidebar-settings,
+.sidebar-support,
+.sidebar-privacy {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar-home-logo,
+.sidebar-profile-logo,
+.sidebar-messages-logo,
+.sidebar-history-logo,
+.sidebar-tasks-logo,
+.sidebar-communities-logo,
+.sidebar-settings-logo,
+.sidebar-support-logo,
+.sidebar-privacy-logo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: invert(100%);
+  height: 35px;
+  width: 35px;
+}
+
+.nav-home ul,
+.nav-settings ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style-type: none;
+  font-size: 23px;
+}
 
 .top-header {
   border: 1px solid #2E6F40;
