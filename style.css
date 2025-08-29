@@ -28,7 +28,7 @@ html {
 .sidebar-container,
 .header-container,
 .content-container {
-  background-color: whitesmoke;
+  background-color: #F2F0EF;
   padding: 10px;
 }
 
@@ -44,7 +44,7 @@ html {
   position: relative;
   box-shadow: 1px 0 5px 0 grey;
   background-color:#458588;
-  color: white;
+  color: #F2F0EF;
 }
 
 .header-container {
@@ -55,6 +55,7 @@ html {
 
   display: flex;
   flex-direction: column;
+  
   padding: 20px 35px;
 }
 
@@ -148,7 +149,8 @@ html {
 .sidebar-privacy-logo {
   background-repeat: no-repeat;
   background-size: contain;
-  filter: invert(100%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(143%)
+  hue-rotate(177deg) brightness(111%) contrast(88%);
   height: 35px;
   width: 35px;
 }
